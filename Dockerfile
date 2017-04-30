@@ -9,6 +9,7 @@ WORKDIR /var/jenkins_home
 
 COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+COPY hudson.tasks.Maven.xml hudson.tasks.Maven.xml
 
 #USER root
 #COPY jenkins.config.sh /usr/local/bin/jenkins.config.sh
