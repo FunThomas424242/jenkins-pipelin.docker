@@ -54,5 +54,7 @@ workflow-aggregator
 bouncycastle-api
 git-client
 
+git
+
 maven-plugin
 pipeline-maven
