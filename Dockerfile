@@ -15,6 +15,7 @@ COPY hudson.tasks.Maven.xml hudson.tasks.Maven.xml
 USER ${user}
 RUN mkdir skripte
 COPY jenkins.config.sh skripte/jenkins.config.sh
+COPY job.xml skripte/job.xml
 RUN skripte/jenkins.config.sh
 
 
