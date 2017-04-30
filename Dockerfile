@@ -8,22 +8,14 @@ RUN echo Jenkins user is:  ${user}
 WORKDIR /var/jenkins_home
 
 COPY plugins.txt /usr/share/jenkins/ref/
+# when stable then: RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 COPY hudson.tasks.Maven.xml hudson.tasks.Maven.xml
-
-#USER root
-#COPY jenkins.config.sh /usr/local/bin/jenkins.config.sh
-#ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.config.sh"]
 
 USER ${user}
 RUN mkdir skripte
 COPY jenkins.config.sh skripte/jenkins.config.sh
 RUN skripte/jenkins.config.sh
-
-
-# RUN cp /var/jenkins_home/war/WEB-INF/jenkins-cli.jar /var/jenkins_home/skripte/jenkins-cli.jar
-
-# RUN java -jar skripte/jenkins-cli.jar -s http://localhost:8080/ help --username admin --password geheim_aus_datei
 
 
 
