@@ -12,7 +12,7 @@ cp /var/jenkins_home/war/WEB-INF/jenkins-cli.jar /var/jenkins_home/cskripte/jenk
 
 pass=`cat /var/jenkins_home/secrets/initialAdminPassword`
 
-cp skripte/job.xml jobs/
+/bin/cat skripte/job.xml | java -jar cskripte/jenkins-cli.jar -s http://localhost:8080/ create-job jobName --username admin --password ${pass}
 
 sleep 1m
 
