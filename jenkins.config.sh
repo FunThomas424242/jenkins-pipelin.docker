@@ -4,7 +4,7 @@ echo DIR:  `pwd`
 
 /bin/tini -- /usr/local/bin/jenkins.sh &
 
-sleep 1m
+sleep 3m
 
 mkdir /var/jenkins_home/cskripte/
 cp /var/jenkins_home/war/WEB-INF/jenkins-cli.jar /var/jenkins_home/cskripte/jenkins-cli.jar
@@ -12,13 +12,17 @@ cp /var/jenkins_home/war/WEB-INF/jenkins-cli.jar /var/jenkins_home/cskripte/jenk
 
 pass=`cat /var/jenkins_home/secrets/initialAdminPassword`
 
-/bin/cat skripte/job.xml | java -jar cskripte/jenkins-cli.jar -s http://localhost:8080/ create-job jobName --username admin --password ${pass}
+echo "INFO: CREATE PIPLINE JOB - BEGIN"
 
-sleep 1m
+java -jar cskripte/jenkins-cli.jar -s http://localhost:8080/ create-job jobName < skripte/job.xml --username admin --password ${pass}
+
+echo "INFO: CREATE PIPLINE JOB - END"
+
+sleep 3m
 
 java -jar cskripte/jenkins-cli.jar -s http://localhost:8080/ safe-restart --username admin --password ${pass}
 
-sleep 1m
+sleep 3m
 
 java -jar cskripte/jenkins-cli.jar -s http://localhost:8080/ safe-shutdown --username admin --password ${pass}
 
