@@ -13,11 +13,12 @@ echo "INFO: CREATE PIPLINE JOB - END"
 sleep 10s
 
 # build starten
+echo "STARTE BUILD PIPEPLINE"
 curl http://localhost:8080/job/pipeline/build?token=start321 --user admin:`/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
+sleep 1m
 echo "CONFIGURATION FINISHED"
 
-# sleep 1m
-# java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar safe-shutdown --username admin --password `/bin/cat /var/jenkins_home/secrets/initialAdminPassword` -s http://localhost:8080/ build pipeline
+java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://localhost:8080/ safe-shutdown --username admin --password `/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
 exit

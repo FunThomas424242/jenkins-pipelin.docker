@@ -6,7 +6,6 @@ echo LAUNCH-DIR:  `pwd`
 
 echo "STARTE JENKINS"
 
-/usr/local/bin/jenkins.sh
+/bin/sh -c /usr/local/bin/jenkins.sh
 
-kill %1
-# fg 1
+
