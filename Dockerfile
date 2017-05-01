@@ -4,6 +4,7 @@ LABEL maintainer "funthomas424242@gmail.com"
 
 ARG user=jenkins
 RUN echo Jenkins user is:  ${user}
+RUN echo Angemeldet als:  `whoami`
 
 WORKDIR /var/jenkins_home
 
@@ -11,6 +12,7 @@ COPY plugins.txt /usr/share/jenkins/ref/
 # when stable then: RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 COPY hudson.tasks.Maven.xml hudson.tasks.Maven.xml
+
 
 USER ${user}
 RUN mkdir skripte
