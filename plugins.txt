@@ -41,10 +41,10 @@ momentjs
 pipeline-graph-analysis
 credentials-binding
 docker-workflow
-pipeline-model-api 1.1.1
+pipeline-model-api
 pipeline-model-declarative-agent
-pipeline-model-extensions   1.1.1
-pipeline-stage-tags-metadata 1.1.1
+pipeline-model-extensions
+pipeline-stage-tags-metadata
 plain-credentials
 docker-commons
 icon-shim
