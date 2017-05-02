@@ -13,7 +13,7 @@
             </userRemoteConfigs>
             <branches>
                 <hudson.plugins.git.BranchSpec>
-                    <name></name>
+                    <name>${SCM_BRANCH_PATTERN_ENV}</name>
                 </hudson.plugins.git.BranchSpec>
             </branches>
             <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
