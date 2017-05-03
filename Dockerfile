@@ -6,12 +6,12 @@ RUN echo Angemeldet als:  `whoami`
 
 WORKDIR /var/jenkins_home
 
-ARG SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.docker.git
-ENV SCM_URL_ENV=${SCM_URL}
-ARG WAIT_FOR_SHUTDOWN=1m
-ENV WAIT_FOR_SHUTDOWN_ENV=${WAIT_FOR_SHUTDOWN}
-ARG SCM_BRANCH_PATTERN='origin/master'
-ENV SCM_BRANCH_PATTERN_ENV=${SCM_BRANCH_PATTERN}
+ARG JP_SCM_URL_ARG=https://github.com/FunThomas424242/jenkins-pipeline.docker.git
+ENV JP_SCM_URL=${JP_SCM_URL_ARG}
+ARG JP_WAIT_FOR_SHUTDOWN_ARG=1m
+ENV JP_WAIT_FOR_SHUTDOWN=${JP_WAIT_FOR_SHUTDOWN_ARG}
+ARG JP_SCM_BRANCH_PATTERN_ARG='origin/master'
+ENV JP_SCM_BRANCH_PATTERN=${JP_SCM_BRANCH_PATTERN_ARG}
 
 # Plugins installieren
 COPY plugins.txt /usr/share/jenkins/ref/

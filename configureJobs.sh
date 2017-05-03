@@ -16,8 +16,8 @@ sleep 10s
 echo "Pipeline build starting"
 curl http://localhost:8080/job/pipeline/build?token=start321 --user admin:`/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
-echo I am waiting for shutdown: $WAIT_FOR_SHUTDOWN_ENV
-sleep $WAIT_FOR_SHUTDOWN_ENV
+echo I am waiting for shutdown: $JP_WAIT_FOR_SHUTDOWN
+sleep $JP_WAIT_FOR_SHUTDOWN
 
 echo "Pipeline configuration finished"
 

@@ -8,12 +8,12 @@
             <configVersion>2</configVersion>
             <userRemoteConfigs>
                 <hudson.plugins.git.UserRemoteConfig>
-                    <url>${SCM_URL_ENV}</url>
+                    <url>${JP_SCM_URL}</url>
                 </hudson.plugins.git.UserRemoteConfig>
             </userRemoteConfigs>
             <branches>
                 <hudson.plugins.git.BranchSpec>
-                    <name>${SCM_BRANCH_PATTERN_ENV}</name>
+                    <name>${JP_SCM_BRANCH_PATTERN}</name>
                 </hudson.plugins.git.BranchSpec>
             </branches>
             <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
