@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/FunThomas424242/jenkins-pipeline.docker.svg?branch=master)](https://travis-ci.org/FunThomas424242/jenkins-pipeline.docker)
+
 # jenkins-pipeline.docker
 Docker Container zum Start einer generischen Build Pipeline
 
