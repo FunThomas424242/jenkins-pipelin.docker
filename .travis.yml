@@ -7,7 +7,7 @@ services:
 
 before_install:
   - docker build -t funthomas424242/jenkins-pipeline .
-  - docker run -e "JP_WAIT_FOR_SHUTDOWN=2m" -e "JP_SCM_BRANCH_PATTERN=origin/master" -e "JP_SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.git" -p 8080:8080 -p 50000:50000 funthomas424242/jenkins-pipeline
+  - docker run -e "JP_WAIT_FOR_SHUTDOWN=2m" -e "JP_SCM_BRANCH_PATTERN=origin/master" -e "JP_SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.docker.git" -p 8080:8080 -p 50000:50000 funthomas424242/jenkins-pipeline
   - docker ps -a
 #  - docker run funthomas424242/jenkins-pipeline /bin/sh -c "cd /root/jenkins-pipeline; bundle exec rake test"
 
