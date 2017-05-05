@@ -10,7 +10,7 @@ secure: "Y8kHpAiMDmHncKTbup3KuHTIMppj9kRJKKk6B0Fp5w1e+B15NLYKL5T0ot31K3YiyIKi+Gh
 secure: "lwGEtNminSjdoeIUa0R+H3L+yDULcSkTOPMixpf5av+YAGSVFIElG3tzWREfsy4URwObU8UXccdwnXs6ktkWdTSn75QDXNFF7T9ZXskqYAvqle6ZstIxFOypCMZ6bzXS5lFegfZ/JM/gI/Wae7ddWuWFDXQqj5E93N3wFD206jvE5aYUxXb0xXl7ntH+AOcb+qqUAEaATsaJ2lkJWjOFmLC8m4IzTk0ZaOKcr5IhelXMPB5Pfv5reUxsKs6yl17VZak5bEmq/Cdkz27fF/vaxXKBsalpqiUfVnJJFaYSa/pyhcEXTwQ9BISTBTqa5useFQzjpuLCtIBlV/x5rfvI9uYZkaQv2UzamxHATxvRklrT59HxQrEzIbeBz/7BQgzuv6tuLkP8Yl/Ax+hNj4dAy0yE60Rf6Z/LVbZFpiRqejRW2Qz5wlsffLvVZKY8B3z7Zhfd3RLu/wTadUHf2lSf3K7zcF7TyEDyVVYg53uqmfjygL2QUsluKvvZ6iJabBU4nGUpVvY8prrIP+GByYf+m+hnCiY8Bw0lZhlBOULkhW4LqKl+uB2MfcaoS9EX5RdKrVUe48P4kbnDIlFqFAmIIUVbDGO5rePeV9Gafkc05Uux0XIHNXyh2IW3ch3VzXuxdlZ4B5l/eNTDLfGrU3Z4TNftxEAXSFCWLUaJKKnWCyU="
 
 env:
-  - CURRENT=`date  +%d.%m.%Y-%H:%m::%s`
+  - CURRENT=date  +%d.%m.%Y-%H:%m::%s
 
 before_install:
   - echo Build time is $CURRENT
