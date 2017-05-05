@@ -25,7 +25,7 @@ before_install:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
 
-      docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" -e funthomas424242@gmail.com funthomas424242-docker-funthomas424242-container.bintray.io
+      docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io
 
       docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME"
 
