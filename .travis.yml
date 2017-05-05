@@ -29,9 +29,10 @@ after_success:
 
       docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/library/jenkins-pipeline:"$BUILD_TIME"
 
+      docker push funthomas424242-docker-funthomas424242-container.bintray.io/library/jenkins-pipeline
+
     fi
 
-# docker push funthomas424242-docker-funthomas424242-container.bintray.io//jenkins-pipeline
 
 # script:
 #  - bundle exec rake test
