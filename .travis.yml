@@ -27,9 +27,9 @@ after_success:
 
       docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" -e funthomas424242@gmail.com funthomas424242-docker-funthomas424242-container.bintray.io
 
-      docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/library/jenkins-pipeline:"$BUILD_TIME"
+      docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME"
 
-      docker push funthomas424242-docker-funthomas424242-container.bintray.io/library/jenkins-pipeline
+      docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline
 
     fi
 
