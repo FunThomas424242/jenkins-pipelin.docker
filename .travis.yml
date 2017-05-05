@@ -20,10 +20,10 @@ before_install:
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" -e funthomas424242@gmail.com funthomas424242-docker-funthomas424242-container.bintray.io
-    #docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io//jenkins-pipeline
-    #docker push funthomas424242-docker-funthomas424242-container.bintray.io//jenkins-pipeline
+      docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" -e funthomas424242@gmail.com funthomas424242-docker-funthomas424242-container.bintray.io
     fi
+# docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io//jenkins-pipeline
+# docker push funthomas424242-docker-funthomas424242-container.bintray.io//jenkins-pipeline
 
 # script:
 #  - bundle exec rake test
