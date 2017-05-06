@@ -33,16 +33,16 @@ after_success:
 
       - if [ "$TRAVIS_PULL_REQUEST_BRANCH" == "" ]; then
 
-          - docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io;
-          - docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME-$TRAVIS_BUILD_NUMBER";
-          - docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline;
+          docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io;
+          docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME-$TRAVIS_BUILD_NUMBER";
+          docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline;
 
         else
 
-          - git checkout $TRAVIS_PULL_REQUEST_BRANCH;
-          - github_changelog_generator;
-          - git commit -am "changelog updated";
-          - git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all
+          git checkout $TRAVIS_PULL_REQUEST_BRANCH;
+          github_changelog_generator;
+          git commit -am "changelog updated";
+          git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
 
         fi
     fi
