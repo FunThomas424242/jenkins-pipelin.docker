@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Feature/0.0.1 [\#2](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/2) ([FunThomas424242](https://github.com/FunThomas424242))
 - Refactoring yml [\#1](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/1) ([FunThomas424242](https://github.com/FunThomas424242))
 
 
