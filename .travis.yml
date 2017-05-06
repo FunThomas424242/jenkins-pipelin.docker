@@ -37,7 +37,7 @@ after_success:
 
     else
 
-      git checkout master;
+      git checkout $TRAVIS_BRANCH;
       github_changelog_generator;
       git commit -am "changelog updated";
       git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
