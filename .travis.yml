@@ -29,21 +29,18 @@ before_install:
 #  - bundle exec rake test
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_TAG" != "" ]; then
 
-      if [ "$TRAVIS_TAG" == "" ]; then
+      docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io;
+      docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME-$TRAVIS_BUILD_NUMBER";
+      docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline;
 
-          git checkout $TRAVIS_BRANCH;
-          github_changelog_generator;
-          git commit -am "changelog updated";
-          git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
+    else
 
-      else
+      git checkout master;
+      github_changelog_generator;
+      git commit -am "changelog updated";
+      git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
 
-          docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io;
-          docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$BUILD_TIME-$TRAVIS_BUILD_NUMBER";
-          docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline;
-
-      fi
     fi
 
