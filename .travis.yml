@@ -22,6 +22,10 @@ before_install:
   - docker ps -a
 
 
+
+# script:
+#  - bundle exec rake test
+
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
 
@@ -36,6 +40,3 @@ after_success:
   - github_changelog_generator
   - git commit -am "changelog updated"
 
-
-# script:
-#  - bundle exec rake test
