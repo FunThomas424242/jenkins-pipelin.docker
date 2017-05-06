@@ -17,12 +17,9 @@ env:
 before_install:
   - echo Build time is $BUILD_TIME
   - gem install github_changelog_generator
-  - github_changelog_generator
-  - git commit -am "changelog updated"
   - docker build -t funthomas424242/jenkins-pipeline .
   - docker run -e "JP_WAIT_FOR_SHUTDOWN=1m" -e "JP_SCM_BRANCH_PATTERN=origin/master" -e "JP_SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.docker.git" -p 8080:8080 -p 50000:50000 funthomas424242/jenkins-pipeline
   - docker ps -a
-
 
 
 after_success:
@@ -35,6 +32,9 @@ after_success:
       docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline
 
     fi
+  - git checkout $TRAVIS_BRANCH
+  - github_changelog_generator
+  - git commit -am "changelog updated"
 
 
 # script:
