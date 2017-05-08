@@ -5,7 +5,7 @@ sleep 1m
 
 echo "Creating jenkins build pipeline job"
 
-java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://localhost:8080/ create-job pipeline < /var/jenkins_home/skripte/job-template.xml --username admin --password `/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
+java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://localhost:8080/ create-job $JP_PROJECT_NAME < /var/jenkins_home/skripte/job-template.xml --username admin --password `/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
 echo "Creating jenkins build pipeline job has finished"
 
