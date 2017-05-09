@@ -2,7 +2,14 @@
 
 ## [Unreleased](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/HEAD)
 
-[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.5...HEAD)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.6...HEAD)
+
+**Merged pull requests:**
+
+- Feature/latest [\#7](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/7) ([FunThomas424242](https://github.com/FunThomas424242))
+
+## [0.0.6](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.6) (2017-05-08)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.5...0.0.6)
 
 **Merged pull requests:**
 
