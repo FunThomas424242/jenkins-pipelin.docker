@@ -27,9 +27,7 @@ install:
 before_script:
   - github_changelog_generator
   - git diff --exit-code
-on_failure:
-  - echo "Bitte github_changelog_generator im project verzeichnis ausführen";
-  - exit 1;
+on_failure: always
 
 # git commit -am "changelog updated";
 # git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
