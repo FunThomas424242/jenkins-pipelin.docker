@@ -1,6 +1,12 @@
 sudo: required
 
-language: ruby-2.3.1
+language: ruby
+rvm:
+  - 2.0
+  - 2.1.10
+  - 2.2.6
+  - 2.3.3
+  - 2.4.0
 
 services:
   - docker
