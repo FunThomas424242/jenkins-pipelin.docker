@@ -22,15 +22,14 @@ before_install:
   - github_changelog_generator
   - git diff --exit-code
   - if [ $? 1= 0 ]; then
-      echo "Bitte github_changelog_generator im project verzeichnis ausführen"
-      exit(1)
+      echo "Bitte github_changelog_generator im project verzeichnis ausführen";
+      exit(1);
     fi
 
 # git commit -am "changelog updated";
 # git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
 
 
- a
 script:
   - docker build -t funthomas424242/jenkins-pipeline .
   - docker run -e "JP_WAIT_FOR_SHUTDOWN=1m" -e "JP_SCM_BRANCH_PATTERN=origin/master" -e "JP_SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.docker.git" -p 8080:8080 -p 50000:50000 funthomas424242/jenkins-pipeline
