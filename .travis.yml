@@ -1,6 +1,8 @@
 sudo: required
 
 language: ruby
+rvm:
+  - 2.2.6
 
 services:
   - docker
@@ -18,15 +20,26 @@ env:
 
 before_install:
   - echo Build time is $BUILD_TIME
+
+install:
   - gem install github_changelog_generator
+
+before_script:
+  - github_changelog_generator
+  - git diff --exit-code
+on_failure:
+  - echo "Bitte github_changelog_generator im project verzeichnis ausführen";
+  - exit 1;
+
+# git commit -am "changelog updated";
+# git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
+
+
+script:
   - docker build -t funthomas424242/jenkins-pipeline .
   - docker run -e "JP_WAIT_FOR_SHUTDOWN=1m" -e "JP_SCM_BRANCH_PATTERN=origin/master" -e "JP_SCM_URL=https://github.com/FunThomas424242/jenkins-pipeline.docker.git" -p 8080:8080 -p 50000:50000 funthomas424242/jenkins-pipeline
   - docker ps -a
 
-
-
-# script:
-#  - bundle exec rake test
 
 after_success:
   - if [ "$TRAVIS_TAG" != "" ]; then
@@ -36,15 +49,5 @@ after_success:
       docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$TRAVIS_TAG";
       docker push funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline;
 
-    else
-
-      if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-
-        git checkout $TRAVIS_BRANCH;
-        github_changelog_generator;
-        git commit -am "changelog updated";
-        git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
-
-     fi
     fi
 
