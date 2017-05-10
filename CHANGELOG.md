@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.0.10](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.10) (2017-05-10)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.9...0.0.10)
+
 ## [0.0.9](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.9) (2017-05-10)
 [Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.8...0.0.9)
 
