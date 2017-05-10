@@ -24,7 +24,7 @@ env:
 
 before_install:
   - echo Build time is $BUILD_TIME
-  - sudo gem install github_changelog_generator
+  - gem install github_changelog_generator
   - github_changelog_generator
   - git diff --exit-code
   - echo code $?
