@@ -20,16 +20,16 @@ env:
 
 before_install:
   - echo Build time is $BUILD_TIME
+
+install:
   - gem install github_changelog_generator
+
+before_script:
   - github_changelog_generator
   - git diff --exit-code
-  - echo code $?
-  - if [ "$?" == "1" ]; then
-
-      echo "Bitte github_changelog_generator im project verzeichnis ausführen";
-      exit 1;
-
-    fi
+on_failure
+  - echo "Bitte github_changelog_generator im project verzeichnis ausführen";
+  - exit 1;
 
 # git commit -am "changelog updated";
 # git push https://$GITHUB_USER:$GITHUB_PASS@github.com/funthomas424242/jenkins-pipeline.docker.git --all;
