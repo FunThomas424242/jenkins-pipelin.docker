@@ -27,7 +27,7 @@ install:
 before_script:
   - github_changelog_generator
   - git diff --exit-code
-on_failure
+on_failure:
   - echo "Bitte github_changelog_generator im project verzeichnis ausführen";
   - exit 1;
 
