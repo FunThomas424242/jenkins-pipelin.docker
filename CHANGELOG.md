@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/HEAD)
+
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.8...HEAD)
+
+**Merged pull requests:**
+
+- Feature/minimizebuilds [\#8](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/8) ([FunThomas424242](https://github.com/FunThomas424242))
+
 ## [0.0.8](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.8) (2017-05-09)
 [Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.7...0.0.8)
 
