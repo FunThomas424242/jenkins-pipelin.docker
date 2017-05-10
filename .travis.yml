@@ -21,7 +21,8 @@ before_install:
   - gem install github_changelog_generator
   - github_changelog_generator
   - git diff --exit-code
-  - if [ $? == 1 ]; then
+  - echo code $?
+  - if [ "$?" == "1" ]; then
 
       echo "Bitte github_changelog_generator im project verzeichnis ausführen";
       exit 1;
