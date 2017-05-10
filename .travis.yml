@@ -24,7 +24,7 @@ before_install:
   - if [ "$?" != "0" ]; then
 
       echo "Bitte github_changelog_generator im project verzeichnis ausführen";
-      exit(1);
+      exit 1;
 
     fi
 
