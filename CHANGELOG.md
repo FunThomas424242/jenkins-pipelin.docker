@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/HEAD)
+
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.10...HEAD)
+
+**Merged pull requests:**
+
+- Feature/workspace volume [\#9](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/9) ([FunThomas424242](https://github.com/FunThomas424242))
+
 ## [0.0.10](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.10) (2017-05-10)
 [Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.9...0.0.10)
 
