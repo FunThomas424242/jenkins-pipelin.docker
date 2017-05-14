@@ -16,9 +16,6 @@ ARG JP_SCM_BRANCH_PATTERN_ARG='origin/master'
 ENV JP_SCM_BRANCH_PATTERN=${JP_SCM_BRANCH_PATTERN_ARG}
 ARG JP_PROJECT_NAME_ARG="jenkins-pipeline"
 ENV JP_PROJECT_NAME=${JP_PROJECT_NAME_ARG}
-ENV JP_WORKSPACE=/var/jenkins_home/workspace
-
-VOLUME ${JP_WORKSPACE}
 
 # Plugins installieren
 COPY plugins.txt /usr/share/jenkins/ref/
@@ -38,6 +35,6 @@ COPY configureJobs.sh /usr/local/bin/configureJobs.sh
 
 ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/launcher.sh"]
 
-
+VOLUME /var/jenkins_home/workspace
 
 
