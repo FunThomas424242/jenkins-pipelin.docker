@@ -4,6 +4,14 @@
 Docker Container zum Start einer generischen Build Pipeline
 
 
+# Release erstellen
+
+* Pull Request von Feature Branch auf github stellen und mergen
+* Wechsel auf master und github_changelog_generator ausführen, commiten und pushen
+* Bei erfolgreichen Build (siehe travis) tag auf master setzen
+* Bei erfolgreichen Build welchsel auf production und tag rein mergen.
+* Kontrolle auf bintray, dass das neue Release deployed wurde und files freigeben.
+ 
 # Container erstellen
 ```
 docker pull funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline
