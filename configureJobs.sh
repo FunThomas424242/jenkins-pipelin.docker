@@ -16,10 +16,13 @@ sleep 10s
 echo "Pipeline build starting"
 curl http://localhost:8080/job/$JP_PROJECT_NAME/build?token=start321 --user admin:`/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
+echo "Pipeline configuration finished"
+
+echo "list all plugins"
+wget http://localhost:8080/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins
+
 echo I am waiting for shutdown: $JP_WAIT_FOR_SHUTDOWN
 sleep $JP_WAIT_FOR_SHUTDOWN
-
-echo "Pipeline configuration finished"
 
 java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -s http://localhost:8080/ safe-shutdown --username admin --password `/bin/cat /var/jenkins_home/secrets/initialAdminPassword`
 
