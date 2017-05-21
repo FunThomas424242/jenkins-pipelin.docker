@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/HEAD)
+
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.11...HEAD)
+
+**Merged pull requests:**
+
+- Workspace volume path configure via env var [\#10](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/10) ([FunThomas424242](https://github.com/FunThomas424242))
+
 ## [0.0.11](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.11) (2017-05-14)
 [Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.10...0.0.11)
 
