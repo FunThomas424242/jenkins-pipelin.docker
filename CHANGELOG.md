@@ -2,10 +2,19 @@
 
 ## [Unreleased](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/HEAD)
 
-[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.11...HEAD)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.12...HEAD)
 
 **Merged pull requests:**
 
+- Feature/workspace volume [\#13](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/13) ([FunThomas424242](https://github.com/FunThomas424242))
+- Feature/workspace volume [\#12](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/12) ([FunThomas424242](https://github.com/FunThomas424242))
+
+## [0.0.12](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.12) (2017-05-21)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.11...0.0.12)
+
+**Merged pull requests:**
+
+- Feature/workspace volume [\#11](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/11) ([FunThomas424242](https://github.com/FunThomas424242))
 - Workspace volume path configure via env var [\#10](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/10) ([FunThomas424242](https://github.com/FunThomas424242))
 
 ## [0.0.11](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.11) (2017-05-14)
