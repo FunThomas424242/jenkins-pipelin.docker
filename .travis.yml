@@ -21,6 +21,7 @@ env:
 
 before_install:
   - echo Build time is $BUILD_TIME
+  - echo Last tag is $TAGNAME
 
 install:
   - gem install github_changelog_generator
