@@ -28,9 +28,12 @@ install:
 before_script:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
-      github_changelog_generator;
-      git diff --exit-code;
-      
+      if [ "$TRAVIS_BRANCH" != "production" ]; then
+
+        github_changelog_generator;
+        git diff --exit-code;
+
+      fi
     fi
 on_failure: always
 
