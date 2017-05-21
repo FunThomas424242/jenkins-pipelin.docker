@@ -6,8 +6,6 @@ RUN echo Angemeldet als:  `whoami`
 
 WORKDIR /var/jenkins_home
 
-
-
 ARG JP_SCM_URL_ARG=https://github.com/FunThomas424242/jenkins-pipeline.docker.git
 ENV JP_SCM_URL=${JP_SCM_URL_ARG}
 ARG JP_WAIT_FOR_SHUTDOWN_ARG=1m
