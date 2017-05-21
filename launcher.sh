@@ -2,9 +2,7 @@
 
 echo jenkins launch directory:  `pwd`
 
-echo host: ${HOSTNAME}
-
-echo jenkins hosted by docker container: `cat /proc/self/cgroup | grep -o  -e "docker-.*.scope" | head -n 1 | sed "s/docker-\(.*\).scope/\\1/"`
+echo jenkins hosted by docker container: ${HOSTNAME}
 
 
 /usr/local/bin/configureJobs.sh &
