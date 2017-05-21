@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Feature/workspace volume [\#11](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/11) ([FunThomas424242](https://github.com/FunThomas424242))
 - Workspace volume path configure via env var [\#10](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/10) ([FunThomas424242](https://github.com/FunThomas424242))
 
 ## [0.0.11](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.11) (2017-05-14)
