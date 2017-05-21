@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.0.15](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.15) (2017-05-21)
+[Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.14...0.0.15)
+
+**Merged pull requests:**
+
+- Releaseprozess beschrieben [\#14](https://github.com/FunThomas424242/jenkins-pipeline.docker/pull/14) ([FunThomas424242](https://github.com/FunThomas424242))
+
 ## [0.0.14](https://github.com/FunThomas424242/jenkins-pipeline.docker/tree/0.0.14) (2017-05-21)
 [Full Changelog](https://github.com/FunThomas424242/jenkins-pipeline.docker/compare/0.0.13...0.0.14)
 
