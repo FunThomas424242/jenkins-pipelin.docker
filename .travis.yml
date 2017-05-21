@@ -25,8 +25,12 @@ install:
   - gem install github_changelog_generator
 
 before_script:
-  - github_changelog_generator
-  - git diff --exit-code
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+  
+      github_changelog_generator;
+      git diff --exit-code;
+      
+    fi
 on_failure: always
 
 # git commit -am "changelog updated";
