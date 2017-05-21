@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.46.2
+FROM jenkinsci/jenkins:2.61
 
 LABEL maintainer "funthomas424242@gmail.com"
 
