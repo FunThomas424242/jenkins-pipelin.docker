@@ -46,7 +46,7 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "production" ]; then
 
-      TAGNAME=$(git describe --abbrev=0 --tags)
+      TAGNAME=$(git describe --abbrev=0 --tags);
       docker login -u="$BINTRAY_USER" -p="$BINTRAY_KEY" funthomas424242-docker-funthomas424242-container.bintray.io;
       docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:latest;
       docker tag funthomas424242/jenkins-pipeline funthomas424242-docker-funthomas424242-container.bintray.io/funthomas424242/jenkins-pipeline:"$TAGNAME";
